@@ -1,0 +1,30 @@
+.section {
+  padding: 150px;
+  background-color: blue;
+  position: relative;
+}
+
+.wrapper {
+  height: 400px;
+  background-color: black;
+}
+
+.box_1 {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  /* position: absolute;
+  bottom: 0;
+  left: 0; */
+}
+
+.box_2 {
+  width: 100px;
+  height: 100px;
+  background-color: green;
+}
+
+/* absolute: di chuyển theo thẻ cha, mất diện tích trên layout */
+/* relative: di chuyển theo vị trí hiện tại, không bị mất diện tích */
+/* dương => đẩy vô trong */
+/* âm => đẩy ra ngoài */

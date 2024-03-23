@@ -1,0 +1,195 @@
+/* HEADER */
+header {
+  z-index: 1;
+  width: 100%;
+}
+
+header .nav-link {
+  position: relative;
+  margin-right: 10px;
+}
+
+header .nav-link.active,
+header .nav-link:hover {
+  color: #35a22c !important;
+}
+
+header .nav-link.active::before {
+  content: "";
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  background-color: #35a22c;
+  display: block;
+}
+
+header .nav-link::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #35a22c;
+  display: block;
+  transition: all 0.5s;
+}
+
+header .nav-link {
+  transition: all 0.5s;
+}
+
+header .nav-item:hover .nav-link::before {
+  width: 100%;
+}
+
+/* BANNER */
+.carousel-inner img {
+  height: 100vh;
+  min-height: 500px;
+  object-fit: cover;
+  /* filter: grayscale(50%) contrast(50%); */
+}
+
+.carousel-caption {
+  z-index: 1;
+  bottom: 50%;
+  transform: translateY(50%);
+}
+
+.carousel-caption img {
+  width: 150px;
+  height: 150px;
+  min-height: unset;
+  border-radius: 50%;
+}
+
+.carousel-item::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(39, 43, 54, 0.5);
+}
+
+.carousel .carousel-indicators [data-bs-target] {
+  height: 13px;
+  width: 13px;
+  border-radius: 50%;
+}
+
+.carousel .carousel-indicators .active {
+  background-color: #35a22c;
+}
+
+.carousel .carousel-indicators {
+  margin-bottom: 6rem;
+}
+
+/* PROJECT */
+.project .nav {
+  justify-content: center;
+}
+
+.project .nav-pills .nav-link {
+  color: #1a1d2d;
+  border: 1px solid #1a1d2d;
+  margin: 0 5px;
+}
+
+.project .nav-pills .nav-link.active {
+  background-color: #35a22c;
+  color: #fff;
+  border-color: #35a22c;
+}
+
+.project .row > * {
+  padding: 20px;
+}
+
+/* .project .card-body {
+  background-color: #85ffbd;
+  background-image: linear-gradient(45deg, #85ffbd 0%, #fffb7d 100%);
+} */
+
+.project .card-body h5 {
+  transition: all 0.5s;
+}
+
+.project .card {
+  border-radius: 16px;
+  overflow: hidden;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.project .card-body {
+  border-bottom-right-radius: 16px;
+  border-bottom-left-radius: 16px;
+  transition: all 0.5s;
+  border: 1px solid transparent;
+  border-top: none;
+}
+
+.project .card:hover .card-body {
+  border: 1px solid #35a22c;
+  border-top: none;
+  cursor: pointer;
+}
+
+.project .card:hover .card-body h5 {
+  color: #35a22c;
+}
+
+/* SKILL */
+.skill {
+  background-image: url(./image/3.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  color: white;
+}
+
+.skill .overlay {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.skill__item {
+  backdrop-filter: blur(3px);
+  padding: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.skill__item i {
+  font-size: 40px;
+  color: #35a22c;
+}
+
+.skill__item:hover {
+  background: #000;
+  border-color: #fff;
+}
+
+.skill__item h4 {
+  font-size: 20px;
+  color: #fff;
+  line-height: 30px;
+  padding-top: 25px;
+  font-weight: 800;
+}
+
+.skill__item p {
+  padding-top: 15px;
+  font-size: 16px;
+  line-height: 24px;
+  color: #fff;
+}

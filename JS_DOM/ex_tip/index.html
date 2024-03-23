@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Tính tiền tip</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <div class="container my-5">
+      <div class="form-group">
+        <label>Tổng tiền</label>
+        <input type="number" class="form-control w-25" id="tongTien" />
+        <div class="mb-3 w-25">
+          <label class="form-label">Bạn muốn tip bao nhiêu?</label>
+          <select class="form-select form-select-lg" id="phanTramTip">
+            <option selected>-- Chọn để tip --</option>
+            <option value="0.3">30% - Tuyệt</option>
+            <option value="0.2">20% - Tốt</option>
+            <option value="0.15">15% - Tạm ổn</option>
+            <option value="0.1">10% - Tồi</option>
+            <option value="0.5">5% - Tệ</option>
+          </select>
+        </div>
+        <label>Số người</label>
+        <input type="number" class="form-control w-25" id="soNguoi" />
+      </div>
+      <button class="btn btn-info my-3" onclick="tinhTien()">Tính tiền</button>
+      <p class="alert alert-info w-25 display-4" id="result"></p>
+    </div>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+      integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./index.js"></script>
+  </body>
+</html>

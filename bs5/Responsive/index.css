@@ -1,0 +1,37 @@
+.box {
+  height: 500px;
+  width: 100%;
+  background: black;
+}
+
+.box2 {
+  height: 300px;
+  background: orange;
+}
+
+/* desktop first */
+
+@media screen and (max-width: 992px) {
+  .box {
+    background: red;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .box {
+    background: blue;
+  }
+}
+
+/* moblile first */
+@media screen and (min-width: 992px) {
+  .box2 {
+    background: pink;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .box2 {
+    background: green;
+  }
+}

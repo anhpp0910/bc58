@@ -1,0 +1,73 @@
+// variable
+$color-blue-1: #2a73dd;
+$color-blue-2: #1d365e;
+
+// mixin
+@mixin btn-theme($colorText, $colorBorder, $background) {
+  border: 2px solid $colorBorder;
+  border-radius: 4px;
+  padding: 10px 20px;
+  color: $colorText;
+  background-color: $background;
+}
+
+// nested
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+header {
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  nav {
+    a {
+      color: $color-blue-2;
+      transition: all 0.3s;
+      &:hover,
+      &.active {
+        color: $color-blue-1;
+      }
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0;
+        height: 2px;
+        width: 0%;
+        background: $color-blue-1;
+        transition: all 0.3s;
+      }
+      &:hover::before,
+      &.active::before {
+        width: 100%;
+      }
+    }
+  }
+  .logo {
+    color: $color-blue-1;
+    font-size: 40px;
+  }
+}
+.banner {
+  background-image: url(../image_SASS/product-header-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  h2 {
+    color: $color-blue-1;
+  }
+  h3 {
+    color: $color-blue-2;
+  }
+  .info {
+    @include btn-theme($color-blue-1, $color-blue-1, transparent);
+  }
+  .shop {
+    @include btn-theme(white, $color-blue-1, $color-blue-1);
+  }
+}

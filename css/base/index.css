@@ -1,0 +1,26 @@
+h3 {
+  background-color: orange;
+}
+
+/* gọi tới 1 thẻ nào đó có class là title */
+.title {
+  font-size: 40px;
+  background-color: red;
+}
+
+/* điểm: thẻ ~ 1, class ~ 10, id ~ 100*/
+/* khi bằng điểm sẽ ưu tiên nằm dưới */
+
+#logo {
+  font-size: 60px;
+}
+
+/* cha con: .a .b */
+.container .title {
+  background-color: palegreen;
+}
+
+/* gọi tới 1 thẻ chứa 2 class */
+.title.footer {
+  background-color: white;
+}
